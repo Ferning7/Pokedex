@@ -20,7 +20,7 @@ na rota pokemons, o código será executado
 
 server.get("/pokemons", async (req, res) => {
   try {
-    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=151');
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=500');
     const pokemons = response.data.results;
 
     res.json(pokemons);
