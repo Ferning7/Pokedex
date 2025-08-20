@@ -20,14 +20,14 @@ na rota pokemons, o código será executado
 
 server.get("/pokemons", async (req, res) => {
   try {
-    const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=500');
+    const response = await axios.get(
+      "https://pokeapi.co/api/v2/pokemon?limit=500"
+    );
     const pokemons = response.data.results;
 
     res.json(pokemons);
-
-  } 
-  catch (error) {
-    res.status(500).json({error: 'Erro ao buscar dados da PokeAPI'});
+  } catch (error) {
+    res.status(500).json({ error: "Erro ao buscar dados da PokeAPI" });
   }
 });
 
