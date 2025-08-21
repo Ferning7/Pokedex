@@ -13,8 +13,8 @@ async function fetchPokemons() {
       const pokemonID = pokemons.url.split("/").slice(-2)[0];
       const imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonID}.png`;
       card.innerHTML = `
-      <img src="${imageUrl}" alt="${pokemon.name}">
-      <h3> ${pokemon.name} </h3>`;
+      <img src="${imageUrl}" alt="${pokemons.name}">
+      <h3> ${pokemons.name} </h3>`;
 
       container.appendChild(card);
     });
